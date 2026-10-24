@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>myPKA öffnen</title>
+<style>
+  body { font: 17px -apple-system, system-ui, sans-serif; margin: 40px 16px; text-align: center; color: #222; background: #fff; }
+  @media (prefers-color-scheme: dark) { body { color: #eee; background: #111; } a { color: #8ab4ff; } }
+  a.btn { display: inline-block; margin-top: 16px; padding: 12px 20px; border-radius: 10px; background: #0a84ff; color: #fff; text-decoration: none; }
+</style>
+</head>
+<body>
+<p id="msg">Öffne myPKA …</p>
+<a class="btn" id="go" href="#">In myPKA öffnen</a>
+<script>
+  // Notiz-Stem steht hinter dem #, wird nie an den Server gesendet.
+  var stem = decodeURIComponent(location.hash.slice(1));
+  var go = document.getElementById('go');
+  if (!stem) {
+    document.getElementById('msg').textContent = 'Kein Notizname im Link.';
+    go.style.display = 'none';
+  } else {
+    var target = 'mypka://note?stem=' + encodeURIComponent(stem);
+    go.href = target;
+    location.href = target;
+  }
+</script>
+</body>
+</html>
