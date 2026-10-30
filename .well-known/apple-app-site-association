@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["S9665K6A6P.com.mypka.app"],
+        "components": [
+          { "/": "/n/*", "comment": "Notiz in myPKA öffnen: /n/#<stem>" },
+          { "/": "/n", "comment": "Notiz in myPKA öffnen: /n#<stem>" }
+        ]
+      }
+    ]
+  }
+}
