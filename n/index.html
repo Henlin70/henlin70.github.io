@@ -13,7 +13,7 @@
 </style>
 </head>
 <body>
-<p id="msg">Öffne myPKA …</p>
+<p id="msg">Notiz in myPKA öffnen</p>
 <a class="btn" id="go" href="#">In myPKA öffnen</a>
 <script>
   // Notiz-Stem steht hinter dem #, wird nie an den Server gesendet.
@@ -24,8 +24,9 @@
     go.style.display = 'none';
   } else {
     var target = 'mypka://note?stem=' + encodeURIComponent(stem);
+    // Kein automatischer Sprung: Die App öffnet sich über den Universal Link (Mac direkt, iPhone über das Banner oben)
+    // oder über diesen Knopf. Ein automatisches location.href löste nur eine überflüssige Rückfrage des Browsers aus.
     go.href = target;
-    location.href = target;
   }
 </script>
 </body>

@@ -1,4 +1,4 @@
-Weiterleitung von https://henlin70.github.io/n/#<stem> auf mypka://note?stem=<stem>.
+Rückfallseite für https://henlin70.github.io/n/#<stem>: Knopf auf mypka://note?stem=<stem> (kein automatischer Sprung mehr, seit 30.10.2026).
 Der Notizname steht hinter dem # und erreicht nie den Server. Keine Daten aus dem Vault.
 
 Universal Links: `.well-known/apple-app-site-association` ordnet `/n/*` der myPKA App zu
